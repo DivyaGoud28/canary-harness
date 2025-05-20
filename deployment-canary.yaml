@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app-canary
+  labels:
+    app: my-app
+    version: canary
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+      version: canary
+  template:
+    metadata:
+      labels:
+        app: my-app
+        version: canary
+    spec:
+      containers:
+        - name: my-app
+          image: reethu2/sample4:latest
+          ports:
+            - containerPort: 80
