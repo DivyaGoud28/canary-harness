@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app-primary
+  labels:
+    app: my-app
+    version: primary
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+      version: primary
+  template:
+    metadata:
+      labels:
+        app: my-app
+        version: primary
+    spec:
+      containers:
+        - name: my-app
+          image: reethu2/sample3:latest
+          ports:
+            - containerPort: 80
