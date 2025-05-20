@@ -5,6 +5,8 @@ metadata:
   labels:
     app: my-app
     version: primary
+  annotations:
+    harness.io/direct-apply: "true"
 spec:
   replicas: 3
   selector:
