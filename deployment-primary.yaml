@@ -93,8 +93,8 @@ spec:
         - destination:
             host: my-app
             subset: primary
-          weight: 80
+          weight: 50
         - destination:
             host: my-app
             subset: canary
-          weight: 20
+          weight: 50
