@@ -85,7 +85,7 @@ metadata:
   name: traffic-split-my-app
 spec:
   hosts:
-    - "my-app"
+    - "*"
   gateways:
     - my-app-gateway
   http:
