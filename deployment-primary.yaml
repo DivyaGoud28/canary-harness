@@ -7,7 +7,6 @@ metadata:
     version: primary
   annotations:
     harness.io/direct-apply: "true"
-    harness.io/track: stable
 spec:
   replicas: 3
   selector:
