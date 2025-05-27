@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: my-app
-          image: nginxdemos/hello:plain-text
+          image: rajukolupula/hotstar:latest
           ports:
             - containerPort: 80
 ---
