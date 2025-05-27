@@ -98,3 +98,20 @@ spec:
             host: my-app
             subset: canary
           weight: 50
+--- 
+
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: my-app-gateway
+  namespace: istio-system
+spec:
+  selector:
+    istio: ingressgateway  # default Istio gateway selector
+  servers:
+    - port:
+        number: 80
+        name: http
+        protocol: HTTP
+      hosts:
+        - "*"
