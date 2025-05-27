@@ -87,7 +87,7 @@ spec:
   hosts:
     - "*"
   gateways:
-    - my-app-gateway
+    - app-gateway
   http:
     - route:
         - destination:
@@ -102,7 +102,7 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: my-app-gateway
+  name: app-gateway
   namespace: istio-system
 spec:
   selector:
