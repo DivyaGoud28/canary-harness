@@ -54,10 +54,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: my-app
-  annotations:
-    cloud.google.com/neg: '{"ingress": true}'
 spec:
-  type: LoadBalancer
   selector:
     app: my-app
   ports:
